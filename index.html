@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="km" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Opening — Mastercare Celebration</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Kantumruy+Pro:wght@300;400;500;600;700&family=Noto+Sans+Khmer:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FDFBF7',
+                        warmcream: '#F7F2EB',
+                        sand: '#E6D5C3',
+                        softgold: '#D4AF37',
+                        deepgold: '#9A7B38',
+                        darkbronze: '#5C4A21',
+                        charcoal: '#2C2A29',
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        playfair: ['Playfair Display', 'serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        khmer: ['Kantumruy Pro', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #2C2A29;
+            font-family: 'Poppins', 'Kantumruy Pro', 'Noto Sans Khmer', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Custom Gold Gradient Text */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #C5A059 0%, #E6CA65 50%, #9A7B38 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border {
+            border-color: rgba(212, 175, 55, 0.35);
+        }
+
+        .gold-card {
+            background: rgba(255, 253, 249, 0.92);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 30px rgba(92, 74, 33, 0.08);
+        }
+
+        /* Palm Shadow Simulation */
+        .palm-shadow-top-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 220px;
+            height: 220px;
+            background: radial-gradient(circle, rgba(92,74,33,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .palm-shadow-bottom-right {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 260px;
+            height: 260px;
+            background: radial-gradient(circle, rgba(92,74,33,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Smooth Hide */
+        .fade-out {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.8s ease-in-out;
+        }
+        .font-khmer { font-family: 'Kantumruy Pro', 'Noto Sans Khmer', sans-serif !important; line-height: 1.8; }
+        .font-montserrat { font-family: 'Montserrat', 'Kantumruy Pro', 'Noto Sans Khmer', sans-serif !important; }
+        .font-poppins { font-family: 'Poppins', 'Kantumruy Pro', 'Noto Sans Khmer', sans-serif !important; }
+        .font-playfair { font-family: 'Playfair Display', 'Kantumruy Pro', 'Noto Sans Khmer', serif !important; }
+        .font-cinzel { font-family: 'Cinzel', 'Kantumruy Pro', 'Noto Sans Khmer', serif !important; }
+    </style>
+</head>
+<body class="antialiased relative selection:bg-sand selection:text-darkbronze">
+
+    <!-- WELCOME / OPENING SCREEN OVERLAY -->
+    <div id="welcome-screen" class="fixed inset-0 z-50 bg-[#F5EFE6] flex flex-col items-center justify-center p-6 text-center transition-all duration-700">
+        <div class="absolute inset-0 opacity-40 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+        <div class="palm-shadow-top-left"></div>
+        <div class="palm-shadow-bottom-right"></div>
+
+        <div class="gold-card p-8 md:p-12 rounded-3xl max-w-md w-full relative z-10 animate-float shadow-2xl border-2 border-[#D4AF37]/40">
+            <div class="text-xs uppercase tracking-[0.3em] text-[#9A7B38] font-semibold mb-3 font-khmer">
+                សូមគោរពអញ្ជើញ · You're Invited
+            </div>
+            
+            <h1 class="font-playfair italic text-4xl md:text-5xl font-bold gold-gradient-text mb-2">
+                Grand Opening
+            </h1>
+            <p class="font-cinzel text-xs tracking-[0.25em] text-[#5C4A21] uppercase mb-6">
+                Grand Opening Celebration
+            </p>
+
+            <div class="w-16 h-[1px] bg-[#D4AF37] mx-auto mb-6 opacity-60"></div>
+
+            <div class="bg-[#FAF6ED] border border-[#D4AF37]/30 rounded-xl p-4 mb-8">
+                <p class="text-xs text-[#5C4A21] uppercase tracking-wider mb-1 font-khmer">ជូនចំពោះ · Dear</p>
+                <p id="welcome-guest-name" class="font-playfair text-xl md:text-2xl font-bold text-[#2C2A29]">Guest Name</p>
+            </div>
+
+            <button onclick="openInvitation()" class="w-full py-4 px-8 bg-gradient-to-r from-[#9A7B38] via-[#C5A059] to-[#9A7B38] text-white font-montserrat font-semibold tracking-widest text-sm uppercase rounded-xl shadow-lg hover:brightness-105 active:scale-95 transition-all duration-300 flex items-center justify-center space-x-3">
+                <span class="font-khmer">បើកធៀបអញ្ជើញ</span>
+                <span class="opacity-80">|</span>
+                <span>Open Invitation</span>
+            </button>
+        </div>
+
+        <p class="mt-8 text-xs font-montserrat text-[#7C6B50] tracking-wider uppercase">
+            Wednesday · 11 . 11 . 2026 · Phnom Penh
+        </p>
+    </div>
+
+    <!-- MAIN WEBSITE CONTENT -->
+    <div id="main-content" class="min-h-screen opacity-0 transition-opacity duration-1000 flex flex-col items-center justify-start py-8 px-4 sm:px-6 relative">
+        
+        <div class="palm-shadow-top-left"></div>
+        <div class="palm-shadow-bottom-right"></div>
+
+        <div class="w-full max-w-6xl mx-auto space-y-6 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-6 lg:items-start relative z-10">
+
+            <!-- INVITATION ARTWORK HERO BANNER -->
+            <div class="gold-card rounded-3xl overflow-hidden shadow-xl border border-[#D4AF37]/40 relative lg:col-span-2">
+                <!-- Background Ambient Image with Overlay -->
+                <div class="relative w-full aspect-[4/5] sm:aspect-[4/3] lg:aspect-[16/7] bg-[#FAF6ED] flex flex-col justify-between p-6 sm:p-8 md:p-12 text-center overflow-hidden">
+                    
+                    <div class="absolute inset-0 bg-cover bg-center opacity-85" style="background-image: radial-gradient(ellipse at 16% 12%, rgba(212,175,55,.20) 0%, transparent 34%), radial-gradient(ellipse at 88% 88%, rgba(154,123,56,.15) 0%, transparent 38%), linear-gradient(145deg, #F5EBDD 0%, #FFFDF9 53%, #EBD6B1 100%);"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#FDFBF7]/90 via-transparent to-[#FDFBF7]/40"></div>
+
+                    <!-- Top Header -->
+                    <div class="relative z-10 pt-2">
+                        <p class="font-montserrat text-[10px] sm:text-xs tracking-[0.3em] uppercase text-[#7C6B50] font-semibold">
+                            You're Invited
+                        </p>
+                        <h2 class="font-playfair italic text-3xl sm:text-4xl font-bold gold-gradient-text mt-1">
+                            Grand Opening
+                        </h2>
+                        <p class="font-cinzel text-[9px] sm:text-[10px] tracking-[0.25em] uppercase text-[#5C4A21] mt-0.5">
+                            Grand Opening Celebration
+                        </p>
+                        <div class="flex items-center justify-center space-x-2 mt-2 text-[9px] uppercase tracking-widest text-[#7C6B50]">
+                            <span>New Beginnings</span>
+                            <span>•</span>
+                            <span>Good Friends</span>
+                            <span>•</span>
+                            <span>Beautiful Moments</span>
+                        </div>
+                    </div>
+
+                    <!-- Personalized Guest Name Badge -->
+                    <div class="relative z-10 my-auto py-3 px-6 bg-white/85 backdrop-blur-md rounded-2xl border border-[#D4AF37]/40 shadow-md max-w-[85%] mx-auto">
+                        <p class="font-montserrat text-[9px] uppercase tracking-[0.2em] text-[#7C6B50] mb-0.5 font-khmer">ជូនចំពោះ · Dear</p>
+                        <p id="banner-guest-name" class="font-playfair italic text-xl sm:text-2xl font-bold text-[#2C2A29]">Guest Name</p>
+                    </div>
+
+                    <!-- Bottom Quick Info on Banner -->
+                    <div class="relative z-10 pb-2">
+                        <div class="inline-flex items-center space-x-3 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-xl border border-[#D4AF37]/30 text-xs font-montserrat font-semibold text-[#5C4A21]">
+                            <span>WEDNESDAY</span>
+                            <span class="text-[#D4AF37] font-bold text-sm">11 . 11 . 2026</span>
+                            <span>5:00 PM – 11:11 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- USER-SUPPLIED EVENT HIGHLIGHTS -->
+            <section aria-label="Event highlights" class="lg:col-span-2">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <figure class="relative overflow-hidden rounded-2xl border border-[#D4AF37]/35 shadow-lg bg-white aspect-[4/3] group">
+                        <img src="venue-highlight-courtyard.webp" alt="Warmly lit Grand Opening Evening venue preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]" loading="lazy" decoding="async">
+                        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent px-4 pt-10 pb-4 text-white font-montserrat text-xs font-semibold tracking-[0.12em] uppercase">Grand Opening Evening</figcaption>
+                    </figure>
+                    <figure class="relative overflow-hidden rounded-2xl border border-[#D4AF37]/35 shadow-lg bg-white aspect-[4/3] group">
+                        <img src="venue-highlight-arch.webp" alt="Draped entrance and lights for the Grand Opening Evening" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]" loading="lazy" decoding="async">
+                        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent px-4 pt-10 pb-4 text-white font-montserrat text-xs font-semibold tracking-[0.12em] uppercase">Evening Venue Preview</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- PERSONAL GREETING CARD -->
+            <div class="gold-card p-6 rounded-3xl text-center space-y-4 lg:col-span-2">
+                <div class="w-10 h-10 mx-auto rounded-full bg-[#FAF0DE] flex items-center justify-center text-[#9A7B38]">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                </div>
+                <h3 class="font-playfair text-xl font-bold text-[#2C2A29]">
+                    Welcome, <span id="card-guest-name" class="gold-gradient-text italic">Guest Name</span>!
+                </h3>
+                <p class="text-xs sm:text-sm text-[#5C4A21] leading-relaxed font-khmer">
+                    ខ្ញុំមានសេចក្តីសោមនស្សរីករាយយ៉ាងខ្លាំង សូមគោរពអញ្ជើញលោកអ្នកមកចូលរួមក្នុងពិធីបើកសម្ពោធ Mastercare ជាផ្លូវការ និងអបអរសាទរឱកាសដ៏ពិសេសនេះជាមួយយើងខ្ញុំ។
+                </p>
+                <p class="text-xs text-[#7C6B50] italic">
+                    "We are delighted to invite you to celebrate the grand opening of Mastercare and share this special evening with us."
+                </p>
+            </div>
+
+            <!-- EVENT DETAILS & 11.11 FEATURE CARD -->
+            <div class="gold-card p-6 sm:p-8 rounded-3xl space-y-6">
+                <div class="text-center space-y-2">
+                    <span class="text-[10px] font-montserrat uppercase tracking-[0.3em] text-[#9A7B38] font-bold font-khmer">ព័ត៌មានលម្អិតនៃកម្មវិធី</span>
+                    <h3 class="font-playfair text-2xl font-bold gold-gradient-text">Event Details</h3>
+                </div>
+
+                <!-- Highlight 11.11 Feature Banner -->
+                <div class="bg-gradient-to-r from-[#FAF3E8] via-[#FFFDF9] to-[#FAF3E8] border border-[#D4AF37]/50 rounded-2xl p-5 text-center shadow-inner">
+                    <div class="font-montserrat text-[10px] uppercase tracking-[0.25em] text-[#9A7B38] font-bold mb-1 font-khmer">
+                        ថ្ងៃខែឆ្នាំ និងពេលវេលាពិសេស · Special Date & Time
+                    </div>
+                    <div class="font-montserrat text-3xl sm:text-4xl font-extrabold text-[#2C2A29] tracking-tight my-2">
+                        11 . 11 . 2026
+                    </div>
+                    <div class="inline-block bg-[#D4AF37]/15 px-3 py-1 rounded-full text-xs font-montserrat font-bold text-[#5C4A21] mb-2 font-khmer">
+                        Wednesday (ថ្ងៃពុធ)
+                    </div>
+                    <div class="text-sm sm:text-base font-bold text-[#9A7B38] font-montserrat tracking-wide">
+                        5:00 PM – 11:11 PM
+                    </div>
+                    <div class="text-[11px] text-[#7C6B50] font-khmer mt-1">
+                        ចាប់ពីម៉ោង ៥:០០ ល្ងាច ដល់ម៉ោង ១១:១១ យប់
+                    </div>
+                </div>
+
+                <!-- Venue Info -->
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-start space-x-3 bg-white/70 p-4 rounded-xl border border-[#D4AF37]/20">
+                        <div class="w-9 h-9 rounded-full bg-[#FAF0DE] flex items-center justify-center text-[#9A7B38] shrink-0 mt-0.5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm text-[#2C2A29]">Mastercare, Boeung Trabek</p>
+                            <p class="text-xs text-[#5C4A21] font-khmer">សាខាបឹងត្របែក រាជធានីភ្នំពេញ</p>
+                            <p class="text-[11px] text-[#7C6B50] mt-0.5">Phnom Penh, Cambodia</p>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <a href="https://maps.app.goo.gl/NDj9i47yVYNTuhvi9" target="_blank" rel="noopener noreferrer" class="py-3 px-4 bg-gradient-to-r from-[#9A7B38] to-[#C5A059] text-white text-xs font-montserrat font-semibold uppercase tracking-wider rounded-xl text-center shadow hover:brightness-105 transition-all flex items-center justify-center space-x-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                            <span>Get Directions</span>
+                        </a>
+                        <button onclick="downloadICS()" class="py-3 px-4 bg-white border border-[#D4AF37] text-[#5C4A21] text-xs font-montserrat font-semibold uppercase tracking-wider rounded-xl text-center shadow-sm hover:bg-[#FAF6ED] transition-all flex items-center justify-center space-x-2">
+                            <svg class="w-4 h-4 text-[#9A7B38]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <span>Save the Date</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Countdown Timer -->
+                <div class="pt-4 border-t border-[#D4AF37]/20 text-center">
+                    <p class="text-[10px] uppercase font-montserrat tracking-[0.25em] text-[#7C6B50] mb-3">Countdown to Grand Opening</p>
+                    <div id="countdown" class="grid grid-cols-4 gap-2 max-w-xs mx-auto">
+                        <div class="bg-white/85 p-2 rounded-xl border border-[#D4AF37]/30">
+                            <span id="days" class="block font-montserrat text-xl font-bold text-[#9A7B38]">00</span>
+                            <span class="text-[9px] uppercase text-[#7C6B50]">Days</span>
+                        </div>
+                        <div class="bg-white/85 p-2 rounded-xl border border-[#D4AF37]/30">
+                            <span id="hours" class="block font-montserrat text-xl font-bold text-[#9A7B38]">00</span>
+                            <span class="text-[9px] uppercase text-[#7C6B50]">Hours</span>
+                        </div>
+                        <div class="bg-white/85 p-2 rounded-xl border border-[#D4AF37]/30">
+                            <span id="minutes" class="block font-montserrat text-xl font-bold text-[#9A7B38]">00</span>
+                            <span class="text-[9px] uppercase text-[#7C6B50]">Mins</span>
+                        </div>
+                        <div class="bg-white/85 p-2 rounded-xl border border-[#D4AF37]/30">
+                            <span id="seconds" class="block font-montserrat text-xl font-bold text-[#9A7B38]">00</span>
+                            <span class="text-[9px] uppercase text-[#7C6B50]">Secs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DRESS CODE SECTION -->
+            <div class="gold-card p-6 sm:p-8 rounded-3xl space-y-5">
+                <div class="text-center space-y-1">
+                    <span class="text-[10px] font-montserrat uppercase tracking-[0.3em] text-[#9A7B38] font-bold">Dress Code Guide</span>
+                    <h3 class="font-playfair text-2xl font-bold gold-gradient-text">Beach Chic</h3>
+                    <p class="text-xs text-[#7C6B50] font-khmer">សូមជ្រើសរើសសំលៀកបំពាក់បែប Beach Chic តាមពណ៌ខាងក្រោម៖</p>
+                </div>
+
+                <!-- Palette Swatches -->
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="bg-white/90 p-3 rounded-xl border border-[#D4AF37]/30 text-center shadow-sm">
+                        <div class="w-6 h-6 rounded-full bg-white border border-[#D4AF37] mx-auto mb-1.5 shadow-sm"></div>
+                        <p class="text-[10px] font-montserrat font-bold text-[#2C2A29]">WHITE</p>
+                        <p class="text-[9px] text-[#7C6B50] font-khmer">ពណ៌ស</p>
+                    </div>
+                    <div class="bg-white/90 p-3 rounded-xl border border-[#D4AF37]/30 text-center shadow-sm">
+                        <div class="w-6 h-6 rounded-full bg-[#F5EFEB] border border-[#D4AF37] mx-auto mb-1.5 shadow-sm"></div>
+                        <p class="text-[10px] font-montserrat font-bold text-[#2C2A29]">CREAM</p>
+                        <p class="text-[9px] text-[#7C6B50] font-khmer">ពណ៌ទឹកដោះគោ</p>
+                    </div>
+                    <div class="bg-white/90 p-3 rounded-xl border border-[#D4AF37]/30 text-center shadow-sm">
+                        <div class="w-6 h-6 rounded-full bg-[#D4C3B3] border border-[#D4AF37] mx-auto mb-1.5 shadow-sm"></div>
+                        <p class="text-[10px] font-montserrat font-bold text-[#2C2A29]">BEIGE</p>
+                        <p class="text-[9px] text-[#7C6B50] font-khmer">ពណ៌ត្នោតខ្ចី</p>
+                    </div>
+                </div>
+
+                <!-- Dress Code Image Showcase -->
+                <div class="rounded-2xl overflow-hidden border border-[#D4AF37]/40 shadow-md bg-white">
+                    <img src="Dress%20Code%20A4%402x.png" alt="Beach Chic Dress Code Guide" class="w-full h-auto object-cover" loading="lazy" decoding="async">
+                </div>
+
+                <!-- Style Notes -->
+                <div class="bg-[#FAF6ED] p-4 rounded-xl border border-[#D4AF37]/30 text-center">
+                    <p class="text-xs font-montserrat font-semibold text-[#5C4A21] tracking-wider uppercase mb-1">
+                        LIGHT LINEN · FLAT SANDALS · STRAW BAGS
+                    </p>
+                    <p class="text-[11px] font-montserrat font-bold text-[#205493] mb-1">
+                        SOFT BLUE ACCENTS WELCOME
+                    </p>
+                    <p class="text-[11px] text-[#7C6B50] font-khmer">
+                        សំលៀកបំពាក់ស្រាលៗ • ស្បែកជើងសាក់ក • កាបូបចំបើង • អាចលាយពណ៌ខៀវស្រាលបានសាយ
+                    </p>
+                </div>
+            </div>
+
+            <!-- GIFT NOTE SECTION -->
+            <div class="gold-card p-6 sm:p-8 rounded-3xl space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-full bg-[#FAF0DE] flex items-center justify-center text-[#9A7B38] shrink-0">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 9h18v12H3zM12 9v12M2 6h20v3H2zM12 6C8.5 1.5 5 3.5 6.5 5.5 7.5 7 10 7 12 6Zm0 0c3.5-4.5 7-2.5 5.5-.5C16.5 7 14 7 12 6Z"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="font-playfair text-lg font-bold text-[#2C2A29]"><span class="font-khmer">ចំណាំអំពីកាដូ</span></h4>
+                        <p class="text-[10px] uppercase font-montserrat tracking-wider text-[#9A7B38]">Gift Note</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#FAF6ED] p-4 rounded-2xl border border-[#D4AF37]/30 space-y-3">
+                    <p class="text-xs sm:text-sm text-[#5C4A21] leading-relaxed font-khmer font-medium">
+                        សូមកុំចំណាយលើការទិញកាដូធំៗ ឬបាច់ផ្កាអី ព្រោះវត្តមានរបស់អ្នកក្នុងកម្មវិធីនេះ គឺជាកាដូដ៏មានតម្លៃបំផុតសម្រាប់ខ្ញុំ។
+                    </p>
+                    <p class="text-xs sm:text-sm text-[#5C4A21] leading-relaxed font-khmer">
+                        តែអ្នកក៏អាចយកកាដូតូចៗប្លែកៗ តម្លៃក្រោម5$ មកប្តូរគ្នាក្នុងកម្មវិធីបាន
+                    </p>
+                    <p class="text-[11px] text-[#7C6B50] italic font-poppins">
+                        "If you wish, you may bring a small, unique gift worth under $5 to exchange with another guest."
+                    </p>
+                </div>
+            </div>
+
+    <!-- DIGITAL PHOTO ALBUM & MEMORIES SECTION -->
+            <div class="gold-card p-6 sm:p-8 rounded-3xl space-y-5 text-center">
+                <div class="w-12 h-12 mx-auto rounded-full bg-[#FAF0DE] flex items-center justify-center text-[#9A7B38]">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <div>
+                    <span class="text-[10px] font-montserrat uppercase tracking-[0.3em] text-[#9A7B38] font-bold">Share Your Moments</span>
+                    <h3 class="font-playfair text-xl font-bold text-[#2C2A29] mt-1">Digital Photo Album</h3>
+                    <p class="text-xs text-[#5C4A21] font-khmer mt-1">ថតរូបភាព និងវីដេអូអនុស្សាវរីយ៍របស់អ្នក រួចចែករំលែកជាមួយពួកយើងទាំងអស់គ្នា!</p>
+                </div>
+
+                <!-- Google Drive Photo Album QR -->
+                <div class="bg-white p-5 rounded-2xl border border-[#D4AF37]/40 max-w-[280px] mx-auto shadow-sm space-y-3">
+                    <a id="album-qr-link" href="https://drive.google.com/drive/folders/1p7g2hu2Xe6mABemMOLYB_gq9QpxM6ms5?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Open the Google Drive photo upload folder">
+                        <div id="album-qr" class="w-[196px] h-[196px] mx-auto p-2 rounded-xl bg-white flex items-center justify-center" role="img" aria-label="QR code for the event photo upload folder"></div>
+                    </a>
+                    <p class="text-[10px] font-montserrat font-bold text-[#5C4A21] tracking-wider uppercase">Scan at Table to Upload</p>
+                    <p class="text-[10px] text-[#7C6B50] font-khmer leading-relaxed">សូមចូលគណនី Google ដើម្បីបង្ហោះរូបភាព។</p>
+                    <p class="text-[10px] text-[#7C6B50] leading-relaxed">Sign in to Google to upload photos.</p>
+                </div>
+
+                <a id="album-link" href="https://drive.google.com/drive/folders/1p7g2hu2Xe6mABemMOLYB_gq9QpxM6ms5?usp=sharing" target="_blank" rel="noopener noreferrer" class="block w-full py-3 px-6 bg-gradient-to-r from-[#9A7B38] to-[#C5A059] text-white font-montserrat font-semibold text-xs uppercase tracking-widest rounded-xl shadow hover:brightness-105 transition-all">
+                    Open Shared Photo Album
+                </a>
+
+                <div class="pt-4 border-t border-[#D4AF37]/20 space-y-3 text-left">
+                    <div class="flex items-center justify-between gap-3">
+                        <div>
+                            <p class="text-[10px] font-montserrat font-bold uppercase tracking-[0.18em] text-[#9A7B38]">Live Guest Photo Wall</p>
+                            <p class="text-[11px] text-[#7C6B50] font-khmer">រូបភាពថ្មីៗពីថត Google Drive របស់កម្មវិធី</p>
+                        </div>
+                        <button type="button" onclick="refreshPhotoWall()" class="shrink-0 rounded-full border border-[#D4AF37]/40 bg-white px-3 py-2 text-[10px] font-montserrat font-semibold uppercase tracking-wider text-[#5C4A21] hover:bg-[#FAF6ED]">Refresh</button>
+                    </div>
+                    <iframe id="drive-photo-wall" src="https://drive.google.com/embeddedfolderview?id=1p7g2hu2Xe6mABemMOLYB_gq9QpxM6ms5#grid" title="Live guest photo uploads from Google Drive" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" class="w-full h-[420px] sm:h-[520px] lg:h-[560px] rounded-xl border border-[#D4AF37]/30 bg-white"></iframe>
+                    <p class="text-[10px] leading-relaxed text-[#7C6B50] font-khmer">ទំព័រនេះបង្ហាញថតរូបក្នុង Drive ហើយធ្វើបច្ចុប្បន្នភាពរៀងរាល់ ១ នាទី។</p>
+                </div>
+            </div>
+
+            <!-- FOOTER SIGNATURE -->
+            <footer class="text-center py-6 space-y-2 lg:col-span-2">
+                <h4 class="font-playfair italic text-2xl font-bold gold-gradient-text">Grand Opening</h4>
+                <p class="text-[10px] font-montserrat uppercase tracking-[0.25em] text-[#7C6B50]">
+                    Wednesday · 11 . 11 . 2026 · Mastercare Phnom Penh
+                </p>
+                <p class="text-[10px] text-[#A08E73]">Designed with love for a wonderful evening</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- FLOATING GUEST LINK SHARING TOOL BUTTON -->
+    <div id="owner-tools" class="fixed bottom-6 right-6 z-40 hidden">
+        <button onclick="openGuestModal()" class="bg-[#2C2A29] text-[#FDFBF7] px-4 py-3 rounded-full shadow-2xl border border-[#D4AF37]/50 flex items-center space-x-2 text-xs font-montserrat font-semibold hover:bg-[#5C4A21] transition-all active:scale-95">
+            <svg class="w-4 h-4 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+            <span>GUEST LINK</span>
+        </button>
+    </div>
+
+    <!-- GUEST LINK GENERATOR MODAL -->
+    <div id="guest-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="gold-card p-6 sm:p-8 rounded-3xl max-w-sm w-full space-y-4 shadow-2xl relative">
+            <div class="flex justify-between items-center">
+                <h3 class="font-playfair text-xl font-bold text-[#2C2A29]">Create Guest Link</h3>
+                <button onclick="closeGuestModal()" class="text-[#7C6B50] hover:text-[#2C2A29] font-bold text-lg">&times;</button>
+            </div>
+            <p class="text-xs text-[#5C4A21] font-khmer">បង្កើតតំណភ្ជាប់ផ្ទាល់ខ្លួនសម្រាប់ភ្ញៀវម្នាក់ៗ៖</p>
+            <div>
+                <label class="block text-[10px] font-montserrat uppercase tracking-wider text-[#7C6B50] mb-1">Guest Name</label>
+                <input type="text" id="modal-guest-input" placeholder="e.g. Dara & Partner" class="w-full px-4 py-3 rounded-xl border border-[#D4AF37]/40 bg-white text-sm focus:outline-none focus:ring-2 focus:ring-[#9A7B38]">
+            </div>
+            <button onclick="generateCustomLink()" class="w-full py-3 bg-[#9A7B38] text-white text-xs font-montserrat font-semibold uppercase tracking-wider rounded-xl shadow hover:bg-[#7D612B] transition-all">
+                Copy Custom Link
+            </button>
+            <div id="copy-success" class="text-center text-xs text-emerald-600 font-semibold hidden">
+                Link copied to clipboard successfully! ✓
+            </div>
+        </div>
+    </div>
+
+    <script src="qrcode.min.js"></script>
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Read Guest Name from URL parameters (?guest=Name or ?to=Name)
+        function getGuestName() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const guest = (urlParams.get("guest") || urlParams.get("to") || "").trim();
+            return guest || "Valued Guest";
+        }
+
+        const guestName = getGuestName();
+        const isManagerMode = new URLSearchParams(window.location.search).get("manage") === "1";
+        const ownerTools = document.getElementById("owner-tools");
+        if (isManagerMode && ownerTools) ownerTools.classList.remove("hidden");
+        document.getElementById('welcome-guest-name').innerText = guestName;
+        document.getElementById('banner-guest-name').innerText = guestName;
+        document.getElementById('card-guest-name').innerText = guestName;
+        document.getElementById('modal-guest-input').value = guestName === "Valued Guest" ? "" : guestName;
+
+        const photoAlbumUrl = "https://drive.google.com/drive/folders/1p7g2hu2Xe6mABemMOLYB_gq9QpxM6ms5?usp=sharing";
+        const photoWallUrl = "https://drive.google.com/embeddedfolderview?id=1p7g2hu2Xe6mABemMOLYB_gq9QpxM6ms5#grid";
+        new QRCode(document.getElementById("album-qr"), {
+            text: photoAlbumUrl,
+            width: 180,
+            height: 180,
+            colorDark: "#2C2A29",
+            colorLight: "#FFFFFF",
+            correctLevel: QRCode.CorrectLevel.M
+        });
+
+        function refreshPhotoWall() {
+            const frame = document.getElementById("drive-photo-wall");
+            if (!frame) return;
+            frame.src = "about:blank";
+            window.setTimeout(() => { frame.src = photoWallUrl; }, 40);
+        }
+        window.setInterval(() => {
+            if (document.visibilityState === "visible") refreshPhotoWall();
+        }, 60000);
+
+        // Open Invitation transition
+        function openInvitation() {
+            const welcomeScreen = document.getElementById('welcome-screen');
+            const mainContent = document.getElementById('main-content');
+            
+            welcomeScreen.classList.add('fade-out');
+            setTimeout(() => {
+                welcomeScreen.style.display = 'none';
+                mainContent.classList.remove('opacity-0');
+            }, 700);
+        }
+
+        // Countdown Timer to Nov 11, 2026 17:00:00
+        const eventDate = new Date('November 11, 2026 17:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = "<div class='col-span-4 text-xs font-semibold text-[#9A7B38] uppercase tracking-widest'>The Grand Opening Is Underway!</div>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Download .ics Calendar File
+        function downloadICS() {
+            const icsContent = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Mastercare Grand Opening//Invitation//EN
+BEGIN:VEVENT
+SUMMARY:Grand Opening — Mastercare Celebration
+DESCRIPTION:Please do not spend on a large gift or flowers; your presence means the most. Small fun gifts are welcome for the exchange.
+DTSTART:20261111T100000Z
+DTEND:20261111T161100Z
+LOCATION:Mastercare, Boeung Trabek, Phnom Penh
+URL:https://maps.app.goo.gl/NDj9i47yVYNTuhvi9
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR`;
+
+            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.setAttribute('download', 'Mastercare-Grand-Opening-2026.ics');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Guest Modal Functions
+        function openGuestModal() {
+            if (!isManagerMode) return;
+            document.getElementById('guest-modal').classList.remove('hidden');
+        }
+
+        function closeGuestModal() {
+            document.getElementById('guest-modal').classList.add('hidden');
+            document.getElementById('copy-success').classList.add('hidden');
+        }
+
+        function generateCustomLink() {
+            const nameInput = document.getElementById('modal-guest-input').value.trim();
+            const baseUrl = `${window.location.origin}${window.location.pathname}`;
+            const customUrl = nameInput ? `${baseUrl}?guest=${encodeURIComponent(nameInput)}` : baseUrl;
+
+            navigator.clipboard.writeText(customUrl).then(() => {
+                const successMsg = document.getElementById('copy-success');
+                successMsg.textContent = "Guest link copied! ✓";
+                successMsg.classList.remove('hidden');
+                setTimeout(() => closeGuestModal(), 1500);
+            }).catch(() => {
+                const successMsg = document.getElementById('copy-success');
+                successMsg.textContent = "Clipboard unavailable. Copy this link: " + customUrl;
+                successMsg.classList.remove('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
