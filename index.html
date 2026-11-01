@@ -120,7 +120,7 @@
                 សូមគោរពអញ្ជើញ · You're Invited
             </div>
             
-            <h1 class="font-playfair italic text-4xl md:text-5xl font-bold gold-gradient-text mb-2">
+            <h1 class="font-playfair italic text-5xl md:text-6xl font-bold gold-gradient-text mb-2">
                 Grand Opening
             </h1>
             <p class="font-cinzel text-xs tracking-[0.25em] text-[#5C4A21] uppercase mb-6">
@@ -167,7 +167,7 @@
                         <p class="font-montserrat text-[10px] sm:text-xs tracking-[0.3em] uppercase text-[#7C6B50] font-semibold">
                             You're Invited
                         </p>
-                        <h2 class="font-playfair italic text-3xl sm:text-4xl font-bold gold-gradient-text mt-1">
+                        <h2 class="font-playfair italic text-4xl sm:text-5xl md:text-6xl font-bold gold-gradient-text mt-1">
                             Grand Opening
                         </h2>
                         <p class="font-cinzel text-[9px] sm:text-[10px] tracking-[0.25em] uppercase text-[#5C4A21] mt-0.5">
@@ -376,45 +376,7 @@
                 </div>
             </div>
 
-    <!-- DIGITAL PHOTO ALBUM & MEMORIES SECTION -->
-            <div class="gold-card p-6 sm:p-8 rounded-3xl space-y-5 text-center">
-                <div class="w-12 h-12 mx-auto rounded-full bg-[#FAF0DE] flex items-center justify-center text-[#9A7B38]">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                </div>
-                <div>
-                    <span class="text-[10px] font-montserrat uppercase tracking-[0.3em] text-[#9A7B38] font-bold">Share Your Moments</span>
-                    <h3 class="font-playfair text-xl font-bold text-[#2C2A29] mt-1">Digital Photo Album</h3>
-                    <p class="text-xs text-[#5C4A21] font-khmer mt-1">ថតរូបភាព និងវីដេអូអនុស្សាវរីយ៍របស់អ្នក រួចចែករំលែកជាមួយពួកយើងទាំងអស់គ្នា!</p>
-                </div>
-
-                <!-- Google Drive Photo Album QR -->
-                <div class="bg-white p-5 rounded-2xl border border-[#D4AF37]/40 max-w-[280px] mx-auto shadow-sm space-y-3">
-                    <a id="album-qr-link" href="https://drive.google.com/drive/folders/1p7g2hu2Xe6mABemMOLYB_gq9QpxM6ms5?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Open the Google Drive photo upload folder">
-                        <div id="album-qr" class="w-[196px] h-[196px] mx-auto p-2 rounded-xl bg-white flex items-center justify-center" role="img" aria-label="QR code for the event photo upload folder"></div>
-                    </a>
-                    <p class="text-[10px] font-montserrat font-bold text-[#5C4A21] tracking-wider uppercase">Scan at Table to Upload</p>
-                    <p class="text-[10px] text-[#7C6B50] font-khmer leading-relaxed">សូមចូលគណនី Google ដើម្បីបង្ហោះរូបភាព។</p>
-                    <p class="text-[10px] text-[#7C6B50] leading-relaxed">Sign in to Google to upload photos.</p>
-                </div>
-
-                <a id="album-link" href="https://drive.google.com/drive/folders/1p7g2hu2Xe6mABemMOLYB_gq9QpxM6ms5?usp=sharing" target="_blank" rel="noopener noreferrer" class="block w-full py-3 px-6 bg-gradient-to-r from-[#9A7B38] to-[#C5A059] text-white font-montserrat font-semibold text-xs uppercase tracking-widest rounded-xl shadow hover:brightness-105 transition-all">
-                    Open Shared Photo Album
-                </a>
-
-                <div class="pt-4 border-t border-[#D4AF37]/20 space-y-3 text-left">
-                    <div class="flex items-center justify-between gap-3">
-                        <div>
-                            <p class="text-[10px] font-montserrat font-bold uppercase tracking-[0.18em] text-[#9A7B38]">Live Guest Photo Wall</p>
-                            <p class="text-[11px] text-[#7C6B50] font-khmer">រូបភាពថ្មីៗពីថត Google Drive របស់កម្មវិធី</p>
-                        </div>
-                        <button type="button" onclick="refreshPhotoWall()" class="shrink-0 rounded-full border border-[#D4AF37]/40 bg-white px-3 py-2 text-[10px] font-montserrat font-semibold uppercase tracking-wider text-[#5C4A21] hover:bg-[#FAF6ED]">Refresh</button>
-                    </div>
-                    <iframe id="drive-photo-wall" src="https://drive.google.com/embeddedfolderview?id=1p7g2hu2Xe6mABemMOLYB_gq9QpxM6ms5#grid" title="Live guest photo uploads from Google Drive" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" class="w-full h-[420px] sm:h-[520px] lg:h-[560px] rounded-xl border border-[#D4AF37]/30 bg-white"></iframe>
-                    <p class="text-[10px] leading-relaxed text-[#7C6B50] font-khmer">ទំព័រនេះបង្ហាញថតរូបក្នុង Drive ហើយធ្វើបច្ចុប្បន្នភាពរៀងរាល់ ១ នាទី។</p>
-                </div>
-            </div>
-
-            <!-- FOOTER SIGNATURE -->
+    <!-- FOOTER SIGNATURE -->
             <footer class="text-center py-6 space-y-2 lg:col-span-2">
                 <h4 class="font-playfair italic text-2xl font-bold gold-gradient-text">Grand Opening</h4>
                 <p class="text-[10px] font-montserrat uppercase tracking-[0.25em] text-[#7C6B50]">
@@ -455,7 +417,6 @@
         </div>
     </div>
 
-    <script src="qrcode.min.js"></script>
     <!-- JAVASCRIPT LOGIC -->
     <script>
         // Read Guest Name from URL parameters (?guest=Name or ?to=Name)
@@ -474,26 +435,7 @@
         document.getElementById('card-guest-name').innerText = guestName;
         document.getElementById('modal-guest-input').value = guestName === "Valued Guest" ? "" : guestName;
 
-        const photoAlbumUrl = "https://drive.google.com/drive/folders/1p7g2hu2Xe6mABemMOLYB_gq9QpxM6ms5?usp=sharing";
-        const photoWallUrl = "https://drive.google.com/embeddedfolderview?id=1p7g2hu2Xe6mABemMOLYB_gq9QpxM6ms5#grid";
-        new QRCode(document.getElementById("album-qr"), {
-            text: photoAlbumUrl,
-            width: 180,
-            height: 180,
-            colorDark: "#2C2A29",
-            colorLight: "#FFFFFF",
-            correctLevel: QRCode.CorrectLevel.M
-        });
 
-        function refreshPhotoWall() {
-            const frame = document.getElementById("drive-photo-wall");
-            if (!frame) return;
-            frame.src = "about:blank";
-            window.setTimeout(() => { frame.src = photoWallUrl; }, 40);
-        }
-        window.setInterval(() => {
-            if (document.visibilityState === "visible") refreshPhotoWall();
-        }, 60000);
 
         // Open Invitation transition
         function openInvitation() {
